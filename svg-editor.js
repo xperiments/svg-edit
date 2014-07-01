@@ -995,7 +995,7 @@ TO-DOS
 				var num = 5 - $('#layerlist tr.layer').size();
 				while (num-- > 0) {
 					// FIXME: there must a better way to do this
-					layerlist.append('<tr><td style="color:white">_</td><td/></tr>');
+					layerlist.append('<tr><td style="opacity:0">_</td><td/></tr>');
 				}
 			};
 
@@ -1273,7 +1273,7 @@ TO-DOS
 					var big_int = multi * u_multi;
 
 					ctx.font = '9px sans-serif';
-
+					ctx.fillStyle = "#AAA"
 					var ruler_d = ((contentDim / u_multi) % multi) * u_multi;
 					var label_pos = ruler_d - big_int;
 					// draw big intervals
@@ -1345,7 +1345,7 @@ TO-DOS
 						}
 						ruler_d += big_int;
 					}
-					ctx.strokeStyle = '#000';
+					ctx.strokeStyle = '#AAA';
 					ctx.stroke();
 				}
 			}
@@ -4291,7 +4291,7 @@ TO-DOS
 			});
 
 			var SIDEPANEL_MAXWIDTH = 300;
-			var SIDEPANEL_OPENWIDTH = 150;
+			var SIDEPANEL_OPENWIDTH = 300;
 			var sidedrag = -1, sidedragging = false, allowmove = false;
 
 			var changeSidePanelWidth = function(delta) {
