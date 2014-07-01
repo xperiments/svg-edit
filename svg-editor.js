@@ -90,7 +90,7 @@ TO-DOS
 				'ext-markers.js',
 				'ext-connector.js',
 				'ext-eyedropper.js',
-				'ext-shapes.js',
+				//'ext-shapes.js',
 				'ext-imagelib.js',
 				'ext-grid.js',
 				'ext-polygon.js',
