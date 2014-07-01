@@ -354,7 +354,7 @@ div.palette_item:first-child {
 }
 
 #main_icon:hover {
-	background: #eee !important;
+	/*background: #eee !important;*/
 }
 
 #main_icon.buttondown {
@@ -401,13 +401,13 @@ div.palette_item:first-child {
 
 #main_menu {
 	z-index: 12;
-	background: #eee;
+	background: #535353;
 	position: relative;
 	width: 230px;
 	padding: 5px;
-	-moz-box-shadow: #555 1px 1px 4px;
-	-webkit-box-shadow: #555 1px 1px 4px;
-	box-shadow: #555 1px 1px 4px;
+	border:1px solid #000;
+	border-top-color: #6a6a6a;
+	border-left-color: #6a6a6a;
 	font-size: 1.1em;
 	display: none;
 	overflow: hidden;
@@ -460,10 +460,7 @@ div.palette_item:first-child {
 .tool_button_current,
 .push_button_pressed,
 .buttondown {
-	background-color: #f4e284 !important;
-	-webkit-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.4), 1px 1px  0 white  !important;
-	-moz-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.4), 1px 1px  0 white  !important;
-	box-shadow: inset 1px 1px 2px rgba(0,0,0,0.4), 1px 1px  0 white  !important;
+	background-color: #3c3c3c !important;
 }
 
 #tools_top {
@@ -888,10 +885,10 @@ span.zoom_tool {
 }
 
 #toggle_stroke_tools:before {
-	content: '>>';
+	content: '▶';
 	letter-spacing: -3px;
 	font-weight: bold;
-	color: #666;
+	color: #FFF;
 }
 
 .expanded #tool_stroke.color_tool {
@@ -899,7 +896,7 @@ span.zoom_tool {
 }
 
 .expanded #toggle_stroke_tools:before {
-	content: '<<';
+	content: '◀';
 }
 
 #toggle_stroke_tools:hover {
