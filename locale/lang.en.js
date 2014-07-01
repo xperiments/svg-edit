@@ -148,7 +148,7 @@ svgEditor.readLang({
 	},
 	layers: {
 		"layer":"Layer",
-		"layers": "Layers",
+		"layers": "<",
 		"del": "Delete Layer",
 		"move_down": "Move Layer Down",
 		"new": "New Layer",

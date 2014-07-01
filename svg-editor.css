@@ -1,5 +1,5 @@
 ﻿body {
-	background: #D0D0D0;
+	background: #535353;
 }
 
 html, body, div{
@@ -28,7 +28,7 @@ html, body, div{
 #svg_editor {
 	font-size: 8pt;
 	font-family: Verdana, Helvetica, Arial;
-	color: #000000;
+	color: #FFF;
 }
 
 a {
@@ -66,8 +66,7 @@ select {
 	  A subtle gradient effect in the canvas.
 	  Just experimenting - not sure if this is worth it.
 	*/
-	background: -moz-radial-gradient(45deg,#bbb,#222);
-	background: -webkit-gradient(radial, center center, 3, center center, 1000, from(#bbb), to(#222));
+	background: #282828;
 }
 
 /* Rulers
@@ -75,7 +74,7 @@ select {
 
 #rulers > div {
 	position: absolute;
-	background: #DDD;
+	background: #393939;
 	z-index: 1;
 	overflow: hidden;
 }
@@ -92,8 +91,8 @@ select {
 	top: 41px;
 	left: 56px;
 	right: 30px;
-	border-bottom: 1px solid;
-	border-left: 1px solid #777;
+	border-bottom: 1px solid #000;
+	border-left: 1px solid #000;
 }
 
 #ruler_y {
@@ -101,8 +100,8 @@ select {
 	top: 55px;
 	left: 41px;
 	bottom: 56px;
-	border-right: 1px solid;
-	border-top: 1px solid #777;
+	border-right: 1px solid #000;
+	border-top: 1px solid #000;
 }
 
 #ruler_x canvas:first-child {
@@ -129,7 +128,7 @@ select {
 	position: absolute;
 	right: 15px;
 	height: 16px;
-	background: #f0f0f0;
+	/*background: #f0f0f0;*/
 	border-radius: 3px;
 	z-index: 2;
 }
@@ -208,7 +207,7 @@ select {
 #sidepanel_handle {
 	display: inline-block;
 	position: absolute;
-	background-color: #D0D0D0;
+	background-color: #535353;
 	font-weight: bold;
 	left: 0;
 	top: 40%;
@@ -235,25 +234,16 @@ select {
 #layerbuttons {
 	margin: 0;
 	padding: 0;
-	padding-left: 2px;
-	padding-right: 2px;
-	width: 125px;
+	width: 285px;
 	height: 20px;
-	border-right: 1px solid #FFFFFF;
-	border-bottom: 1px solid #FFFFFF;
-	border-left: 1px solid #808080;
-	border-top: 1px solid #808080;
 	overflow: hidden;
+	border: 0px;
 }
 
 .layer_button {
-	width: 14px;
-	height: 14px;
+	width: 20px;
+	height: 20px;
 	padding: 1px;
-	border-left: 1px solid #FFFFFF;
-	border-top: 1px solid #FFFFFF;
-	border-right: 1px solid #808080;
-	border-bottom: 1px solid #808080;
 	cursor: pointer;
 	float: left;
 	margin-right: 3px;
@@ -277,21 +267,23 @@ select {
 #layerlist {
 	margin: 1px;
 	padding: 0;
-	width: 127px;
+	width:285px;
+	height: 250px;
 	border-collapse: collapse;
 	border: 1px solid #808080;
-	background-color: #FFFFFF;
+	background-color: #535353;
 }
 
 #layerlist tr.layer {
-	background-color: #FFFFFF;
+	background-color: #535353;
 	margin: 0;
 	padding: 0;
+	height: 33px;
 }
 
 #layerlist tr.layersel {
 	border: 1px solid #808080;
-	background-color: #CCCCCC;
+	background-color: #6d7e93;
 }
 
 #layerlist td.layervis {
@@ -496,7 +488,7 @@ div.palette_item:first-child {
 	left: 1px;
 	margin-top: -2px;
 	padding-left: 2px;
-	background: #D0D0D0; /* Needed so flyout icons don't appear on the left */
+
 	z-index: 4;
 }
 
@@ -594,6 +586,9 @@ div.toolset label span {
 
 input[type=text] {
 	padding: 2px;
+	background-color: #000;
+	color:#FFF;
+	-webkit-appearance: caret;
 }
 
 #tools_left .tool_button,
@@ -699,14 +694,8 @@ span.zoom_tool {
 	width: 24px;
 	margin: 2px 2px 4px 2px;
 	padding: 3px;
-	-webkit-box-shadow: inset 1px 1px 2px white, 1px 1px 1px rgba(0,0,0,0.3);
-	moz-box-shadow: inset 1px 1px 2px white, 1px 1px 1px rgba(0,0,0,0.3);
-	box-shadow: inset 1px 1px 2px white, 1px 1px 1px rgba(0,0,0,0.3);
-	background-color: #E8E8E8;
 	cursor: pointer;
-	border-radius: 3px;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
+
 }
 
  #main_menu li#tool_open,  #main_menu li#tool_import {
@@ -920,7 +909,7 @@ span.zoom_tool {
 .color_tool {
 	position: absolute;
 	overflow: hidden;
-	background: #f0f0f0;
+	/*background: #f0f0f0;*/
 	height: 26px;
 	line-height: 26px;
 	border-radius: 3px;
@@ -1464,3 +1453,10 @@ ul li.current {
 .contextMenu LI.delete A { background-image: url(images/page_white_delete.png); }
 .contextMenu LI.quit A { background-image: url(images/door.png); }
 */
+
+
+INPUT.spin-button
+{
+	background-color: #000 !important;
+}
+
