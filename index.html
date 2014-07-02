@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="jgraduate/css/jgraduate.css" type="text/css"/>
 <link rel="stylesheet" href="svg-editor.css" type="text/css"/>
 <link rel="stylesheet" href="spinbtn/JQuerySpinBtn.css" type="text/css"/>
-
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 <!--{if jquery_release}>
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -94,21 +94,23 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
 <div id="sidepanels">
 	<div id="layerpanel">
 		<h3 id="layersLabel">Layers</h3>
-		<fieldset id="layerbuttons">
-			<div id="layer_new" class="layer_button"  title="New Layer"></div>
-			<div id="layer_delete" class="layer_button"  title="Delete Layer"></div>
-			<div id="layer_rename" class="layer_button"  title="Rename Layer"></div>
-			<div id="layer_up" class="layer_button"  title="Move Layer Up"></div>
-			<div id="layer_down" class="layer_button"  title="Move Layer Down"></div>
-			<div id="layer_moreopts" class="layer_button"  title="More Options"></div>
-		</fieldset>
-		
+		<div id="layer_moreopts" class="layer_button"  title="More Options"></div>
 		<table id="layerlist">
 			<tr class="layer">
 				<td class="layervis"></td>
 				<td class="layername">Layer 1</td>
 			</tr>
 		</table>
+
+		<fieldset id="layerbuttons">
+			<div id="layer_new" class="layer_button"  title="New Layer"></div>
+			<div id="layer_delete" class="layer_button"  title="Delete Layer"></div>
+			<div id="layer_rename" class="layer_button"  title="Rename Layer"></div>
+			<div id="layer_up" class="layer_button"  title="Move Layer Up"></div>
+			<div id="layer_down" class="layer_button"  title="Move Layer Down"></div>
+
+		</fieldset>
+
 		<span id="selLayerLabel">Move elements to:</span>
 		<select id="selLayerNames" title="Move selected elements to a different layer" disabled="disabled">
 			<option selected="selected" value="layer1">Layer 1</option>
@@ -120,7 +122,6 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
 <div id="main_button">
 	<div id="main_icon" class="tool_button" title="Main Menu">
 		<span>SVG-Edit</span>
-		<div id="logo"></div>
 		<div class="dropdown"></div>
 	</div>
 		
@@ -151,7 +152,11 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
 				<div></div>
 				Save Image (S)
 			</li>
-			
+
+			<li id="tool_source">
+				Edit Source [U]
+			</li>
+
 			<li id="tool_export">
 				<div></div>
 				Export
@@ -183,17 +188,17 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
 
 	<div id="editor_panel">
 		<div class="tool_sep"></div>
-		<div class="push_button" id="tool_source" title="Edit Source [U]"></div>
+		<!--div class="push_button" id="tool_source" title="Edit Source [U]"></div-->
 		<div class="tool_button" id="tool_wireframe" title="Wireframe Mode [F]"></div>
 	</div>
 
 	<!-- History buttons -->
-	<div id="history_panel">
+	<!--div id="history_panel">
 		<div class="tool_sep"></div>
 		<div class="push_button tool_button_disabled" id="tool_undo" title="Undo [Z]"></div>
 		<div class="push_button tool_button_disabled" id="tool_redo" title="Redo [Y]"></div>
-	</div>
-	
+	</div-->
+
 	<!-- Buttons when a single element is selected -->
 	<div id="selected_panel">
 		<div class="toolset">
@@ -206,9 +211,10 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
 			<div class="push_button" id="tool_topath" title="Convert to Path"></div>
 			<div class="push_button" id="tool_reorient" title="Reorient path"></div>
 			<div class="push_button" id="tool_make_link" title="Make (hyper)link"></div>
+			<div class="push_button" id="tool_ungroup" title="Ungroup Elements [G]"></div>
 			<div class="tool_sep"></div>
 			<label id="idLabel" title="Identify the element">
-				<span>id:</span>
+				<span>Identifier:</span>
 				<input id="elem_id" class="attr_changer" data-attr="id" size="10" type="text"/>
 			</label>
 		</div>
@@ -217,7 +223,7 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
 			<span id="angleLabel" class="icon_label"></span>
 			<input id="angle" size="2" value="0" type="text"/>
 		</label>
-		
+
 		<div class="toolset" id="tool_blur" title="Change gaussian blur value">
 			<label>
 				<span id="blurLabel" class="icon_label"></span>
@@ -230,22 +236,22 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
 				</ul>
 			</div>
 		</div>
-		
+
 		<div class="dropdown toolset" id="tool_position" title="Align Element to Page">
 				<div id="cur_position" class="icon_label"></div>
-				<button></button>
-		</div>		
+				<!--button></button-->
+		</div>
 
 		<div id="xy_panel" class="toolset">
 			<label>
-				x: <input id="selected_x" class="attr_changer" title="Change X coordinate" size="3" data-attr="x"/>
+				X <input id="selected_x" class="attr_changer" title="Change X coordinate" size="3" data-attr="x"/>
 			</label>
 			<label>
-				y: <input id="selected_y" class="attr_changer" title="Change Y coordinate" size="3" data-attr="y"/>
+				Y <input id="selected_y" class="attr_changer" title="Change Y coordinate" size="3" data-attr="y"/>
 			</label>
 		</div>
 	</div>
-	
+
 	<!-- Buttons when multiple elements are selected -->
 	<div id="multiselected_panel">
 		<div class="tool_sep"></div>
@@ -260,7 +266,7 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
 		<div class="push_button" id="tool_aligntop" title="Align Top"></div>
 		<div class="push_button" id="tool_alignmiddle" title="Align Middle"></div>
 		<div class="push_button" id="tool_alignbottom" title="Align Bottom"></div>
-		<label id="tool_align_relative"> 
+		<label id="tool_align_relative">
 			<span id="relativeToLabel">relative to:</span>
 			<select id="align_relative_to" title="Align relative to ...">
 			<option id="selected_objects" value="selected">selected objects</option>
@@ -291,24 +297,24 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
 	</div>
 
 	<div id="image_panel">
-	<div class="toolset">
-		<label><span id="iwidthLabel" class="icon_label"></span>
-		<input id="image_width" class="attr_changer" title="Change image width" size="3" data-attr="width"/>
-		</label>
-		<label><span id="iheightLabel" class="icon_label"></span>
-		<input id="image_height" class="attr_changer" title="Change image height" size="3" data-attr="height"/>
-		</label>
-	</div>
-	<div class="toolset">
-		<label id="tool_image_url">url:
-			<input id="image_url" type="text" title="Change URL" size="35"/>
-		</label>
-		<label id="tool_change_image">
-			<button id="change_image_url" style="display:none;">Change Image</button>
-			<span id="url_notice" title="NOTE: This image cannot be embedded. It will depend on this path to be displayed"></span>
-		</label>
-	</div>
-  </div>
+		<div class="toolset">
+			<label><span id="iwidthLabel" class="icon_label"></span>
+			<input id="image_width" class="attr_changer" title="Change image width" size="3" data-attr="width"/>
+			</label>
+			<label><span id="iheightLabel" class="icon_label"></span>
+			<input id="image_height" class="attr_changer" title="Change image height" size="3" data-attr="height"/>
+			</label>
+		</div>
+		<div class="toolset">
+			<label id="tool_image_url">url:
+				<input id="image_url" type="text" title="Change URL" size="35"/>
+			</label>
+			<label id="tool_change_image">
+				<button id="change_image_url" style="display:none;">Change Image</button>
+				<span id="url_notice" title="NOTE: This image cannot be embedded. It will depend on this path to be displayed"></span>
+			</label>
+		</div>
+	  </div>
 
 	<div id="circle_panel">
 		<div class="toolset">
@@ -369,7 +375,7 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
 			<div class="tool_button" id="tool_bold" title="Bold Text [B]"><span></span>B</div>
 			<div class="tool_button" id="tool_italic" title="Italic Text [I]"><span></span>i</div>
 		</div>
-		
+
 		<div class="toolset" id="tool_font_family">
 			<label>
 				<!-- Font family -->
@@ -391,7 +397,7 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
 			<span id="font_sizeLabel" class="icon_label"></span>
 			<input id="font_size" size="3" value="0" type="text"/>
 		</label>
-		
+
 		<!-- Not visible, but still used -->
 		<input id="text" type="text" size="35"/>
 	</div>
@@ -403,7 +409,7 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
 		<!-- Add viewBox field here? -->
 
 		<label id="group_title" title="Group identification label">
-			<span>label:</span>
+			<span>Group ID:</span>
 			<input id="g_title" data-attr="title" size="10" type="text"/>
 		</label>
 	</div>
@@ -607,10 +613,7 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
 <div id="svg_source_editor">
 	<div class="overlay"></div>
 	<div id="svg_source_container">
-		<div id="tool_source_back" class="toolbar_button">
-			<button id="tool_source_save">Apply Changes</button>
-			<button id="tool_source_cancel">Cancel</button>
-		</div>
+
 		<div id="save_output_btns">
 			<p id="copy_save_note">Copy the contents of this box into a text editor, then save the file with a .svg extension.</p>
 			<button id="copy_save_done">Done</button>
@@ -618,6 +621,10 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
 		<form>
 			<textarea id="svg_source_textarea" spellcheck="false"></textarea>
 		</form>
+		<div id="tool_source_back" class="toolbar_button" style="display: block;">
+			<button id="tool_source_save">Ok</button>
+			<button id="tool_source_cancel">Cancel</button>
+		</div>
 	</div>
 </div>
 
@@ -625,12 +632,6 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
 <div id="svg_docprops">
 	<div class="overlay"></div>
 	<div id="svg_docprops_container">
-		<div id="tool_docprops_back" class="toolbar_button">
-			<button id="tool_docprops_save">OK</button>
-			<button id="tool_docprops_cancel">Cancel</button>
-		</div>
-
-
 		<fieldset id="svg_docprops_docprops">
 			<legend id="svginfo_image_props">Image Properties</legend>
 			<label>
@@ -664,17 +665,17 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
 				<label><input type="radio" name="image_opt" value="ref"/> <span id="image_opt_ref">Use file reference</span> </label>
 			</fieldset>
 		</fieldset>
-
+		<div id="tool_docprops_back" class="toolbar_button">
+			<button id="tool_docprops_save">OK</button>
+			<button id="tool_docprops_cancel">Cancel</button>
+		</div>
 	</div>
 </div>
 
 <div id="svg_prefs">
 	<div class="overlay"></div>
 	<div id="svg_prefs_container">
-		<div id="tool_prefs_back" class="toolbar_button">
-			<button id="tool_prefs_save">OK</button>
-			<button id="tool_prefs_cancel">Cancel</button>
-		</div>
+
 
 		<fieldset>
 			<legend id="svginfo_editor_prefs">Editor Preferences</legend>
@@ -759,7 +760,10 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
 			</fieldset>
 
 		</fieldset>
-
+		<div id="tool_prefs_back" class="toolbar_button">
+			<button id="svg_source_editor">OK</button>
+			<button id="tool_prefs_cancel">Cancel</button>
+		</div>
 	</div>
 </div>
 
