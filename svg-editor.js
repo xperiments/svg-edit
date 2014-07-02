@@ -649,7 +649,7 @@ TO-DOS
 					'#tool_export div': 'export',
 					'#tool_open div div': 'open',
 					'#tool_import div div': 'import',
-					'#tool_source': 'source',
+					//'#tool_source': 'source',
 					'#tool_docprops > div': 'docprops',
 					'#tool_wireframe': 'wireframe',
 
@@ -730,7 +730,7 @@ TO-DOS
 				resize: {
 					'#logo .svg_icon': 28,
 					'.flyout_arrow_horiz .svg_icon': 5,
-					'.layer_button .svg_icon, #layerlist td.layervis .svg_icon': 14,
+					'.layer_button .svg_icon, #layerlist td.layervis .svg_icon': 18,
 					'.dropdown button .svg_icon': 7,
 					'#main_button .dropdown .svg_icon': 9,
 					'.palette_item:first .svg_icon' : 15,
@@ -967,7 +967,7 @@ TO-DOS
 				if (icon !== undefined) {
 					var copy = icon.clone();
 					$('td.layervis', layerlist).append(copy);
-					$.resizeSvgIcons({'td.layervis .svg_icon': 14});
+					$.resizeSvgIcons({'td.layervis .svg_icon': 18});
 				}
 				// handle selection of layer
 				$('#layerlist td.layername')

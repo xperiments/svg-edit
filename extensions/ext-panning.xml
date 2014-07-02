@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg">
 	<g id="ext-panning">
 	  <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-          <path fill="#aeaeae" class="path1" d="M31 17.42v-2.84h-12.667v-8.23h3.241l-5.575-6.281-5.575 6.281h3.241v8.23h-12.667v2.84h12.667v8.23h-3.241l5.575 6.281 5.575-6.281h-3.241v-8.23z"></path>
+		  <path fill="#aeaeae" class="path1" d="M31.508 16l-7.161-7.161v4.182h-5.368v-5.368h4.181l-7.161-7.161-7.161 7.161h4.182v5.368h-5.368v-4.182l-7.161 7.161 7.161 7.161v-4.181h5.368v5.368h-4.182l7.161 7.161 7.161-7.161h-4.181v-5.368h5.368v4.181z"></path>
   	</svg>
 	</g>
 </svg>
