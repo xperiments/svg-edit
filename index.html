@@ -198,7 +198,7 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
 		<div class="push_button tool_button_disabled" id="tool_undo" title="Undo [Z]"></div>
 		<div class="push_button tool_button_disabled" id="tool_redo" title="Redo [Y]"></div>
 	</div-->
-	
+
 	<!-- Buttons when a single element is selected -->
 	<div id="selected_panel">
 		<div class="toolset">
@@ -211,6 +211,7 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
 			<div class="push_button" id="tool_topath" title="Convert to Path"></div>
 			<div class="push_button" id="tool_reorient" title="Reorient path"></div>
 			<div class="push_button" id="tool_make_link" title="Make (hyper)link"></div>
+			<div class="push_button" id="tool_ungroup" title="Ungroup Elements [G]"></div>
 			<div class="tool_sep"></div>
 			<label id="idLabel" title="Identify the element">
 				<span>Identifier:</span>
@@ -238,15 +239,15 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
 
 		<div class="dropdown toolset" id="tool_position" title="Align Element to Page">
 				<div id="cur_position" class="icon_label"></div>
-				<button></button>
+				<!--button></button-->
 		</div>
 
 		<div id="xy_panel" class="toolset">
 			<label>
-				x: <input id="selected_x" class="attr_changer" title="Change X coordinate" size="3" data-attr="x"/>
+				X <input id="selected_x" class="attr_changer" title="Change X coordinate" size="3" data-attr="x"/>
 			</label>
 			<label>
-				y: <input id="selected_y" class="attr_changer" title="Change Y coordinate" size="3" data-attr="y"/>
+				Y <input id="selected_y" class="attr_changer" title="Change Y coordinate" size="3" data-attr="y"/>
 			</label>
 		</div>
 	</div>
@@ -408,7 +409,7 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
 		<!-- Add viewBox field here? -->
 
 		<label id="group_title" title="Group identification label">
-			<span>label:</span>
+			<span>Group ID:</span>
 			<input id="g_title" data-attr="title" size="10" type="text"/>
 		</label>
 	</div>

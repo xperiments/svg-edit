@@ -1513,3 +1513,13 @@ li.jGraduate_tab_current {
 	margin-right: 12px;
 	margin-top: 10px;
 }
+
+
+#tool_position
+{
+	margin-left:10px;
+}
+
+#marker_panel button{
+	display: none;
+}
