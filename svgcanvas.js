@@ -252,6 +252,7 @@ svgedit.utilities.init({
 	getSelectedElements: function() { return selectedElements; },
 	getSVGContent: function() { return svgcontent; },
 	getBaseUnit: function() { return curConfig.baseUnit; },
+	getSnappingStep: function() { return curConfig.snappingStep; },
 	getStepSize: function() { return curConfig.stepSize; }
 });
 var findDefs = canvas.findDefs = svgedit.utilities.findDefs;

@@ -93,7 +93,7 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
 
 <div id="sidepanels">
 	<div id="layerpanel">
-		<h3 id="layersLabel">Layers</h3>
+		<span id="layersLabel">LAYERS</span>
 		<div id="layer_moreopts" class="layer_button"  title="More Options"></div>
 		<table id="layerlist">
 			<tr class="layer">
@@ -111,10 +111,19 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
 
 		</fieldset>
 
-		<span id="selLayerLabel">Move elements to:</span>
-		<select id="selLayerNames" title="Move selected elements to a different layer" disabled="disabled">
-			<option selected="selected" value="layer1">Layer 1</option>
-		</select>
+		<table>
+			<tr>
+				<td><span id="selLayerLabel">Move elements to1:</span></td>
+				<td>
+					<select id="selLayerNames" title="Move selected elements to a different layer" disabled="disabled">
+						<option selected="selected" value="layer1">Layer 1</option>
+					</select>
+				</td>
+			</tr>
+		</table>
+
+		NAVIGATOR:
+
 	</div>
 	<div id="sidepanel_handle" title="Drag left/right to resize side panel [X]"><</div>
 </div>
@@ -166,17 +175,12 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
 				<div></div>
 				Document Properties (D)
 			</li>
+			<li id="tool_prefs_option">
+				<div></div>
+				Preferences
+			</li>
 		</ul>
 
-		<p>
-			<a href="http://svg-edit.googlecode.com/" target="_blank">
-				SVG-edit Home Page
-			</a>
-		</p>
-
-		<button id="tool_prefs_option">
-			Editor Options
-		</button>
 
 
 	</div>
@@ -680,7 +684,7 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
 		<fieldset>
 			<legend id="svginfo_editor_prefs">Editor Preferences</legend>
 
-			<label><span id="svginfo_lang">Language:</span>
+			<label style="display: none"><span id="svginfo_lang">Language:</span>
 				<!-- Source: http://en.wikipedia.org/wiki/Language_names -->
 				<select id="lang_select">
 				  <option id="lang_ar" value="ar">العربية</option>
@@ -704,7 +708,7 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
 				</select>
 			</label>
 
-			<label><span id="svginfo_icons">Icon size:</span>
+			<label style="display: none"><span id="svginfo_icons">Icon size:</span>
 				<select id="iconsize">
 					<option id="icon_small" value="s">Small</option>
 					<option id="icon_medium" value="m" selected="selected">Medium</option>
@@ -761,7 +765,7 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
 
 		</fieldset>
 		<div id="tool_prefs_back" class="toolbar_button">
-			<button id="svg_source_editor">OK</button>
+			<button id="tool_prefs_save">OK</button>
 			<button id="tool_prefs_cancel">Cancel</button>
 		</div>
 	</div>

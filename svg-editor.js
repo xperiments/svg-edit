@@ -644,7 +644,8 @@ TO-DOS
 				placement: {
 					'#logo': 'logo',
 
-					'#tool_clear div,#layer_new': 'new_image',
+					'#tool_clear div':'new_image',
+					'#layer_new': 'layer_new',
 					'#tool_save div': 'save',
 					'#tool_export div': 'export',
 					'#tool_open div div': 'open',
@@ -666,7 +667,8 @@ TO-DOS
 					'#tool_circle': 'circle',
 					'#tool_fhellipse': 'fh_ellipse',
 					'#tool_path': 'path',
-					'#tool_text,#layer_rename': 'text',
+					'#tool_text':'text',
+					'#layer_rename': 'text',
 					'#tool_image': 'image',
 					'#tool_zoom': 'zoom',
 
@@ -4329,7 +4331,7 @@ TO-DOS
 				changeSidePanelWidth(deltaX);
 			};
 
-			$('#sidepanel_handle')
+			/*$('#sidepanel_handle')
 				.mousedown(function(evt) {
 					sidedrag = evt.pageX;
 					$(window).mousemove(resizeSidePanel);
@@ -4345,11 +4347,17 @@ TO-DOS
 					sidedragging = false;
 				});
 
-			$(window).mouseup(function() {
-				sidedrag = -1;
-				sidedragging = false;
-				$('#svg_editor').unbind('mousemove', resizeSidePanel);
-			});
+			 $(window).mouseup(function() {
+			 sidedrag = -1;
+			 sidedragging = false;
+			 $('#svg_editor').unbind('mousemove', resizeSidePanel);
+			 });
+
+				*/
+
+			$('#sidepanel_handle').on('click',function(){toggleSidePanel() } );
+
+
 
 			populateLayers();
 
